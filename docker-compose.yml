@@ -27,7 +27,7 @@ secrets:
 
 services:
   mon:
-    image: ceph/daemon
+    image: ceph/daemon:latest-mimic
     entrypoint: /tmp/compat.sh
     command: mon
     networks:
@@ -55,7 +55,7 @@ services:
           - node.role == manager
 
   mgr:
-    image: ceph/daemon
+    image: ceph/daemon:latest-mimic
     entrypoint: /tmp/compat.sh
     command: mgr
     #hostname: "{{.Node.Hostname}}"
@@ -79,7 +79,7 @@ services:
       replicas: 1
 
   osd:
-    image: ceph/daemon
+    image: ceph/daemon:latest-mimic
     entrypoint: /tmp/compat.sh
     command: osd
     networks:
@@ -100,7 +100,7 @@ services:
       mode: global
 
   mds:
-    image: ceph/daemon
+    image: ceph/daemon:latest-mimic
     entrypoint: /tmp/compat.sh
     command: mds
     networks:
