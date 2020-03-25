@@ -24,4 +24,4 @@ elif [ "$1" == "mgr" -a "$ZABBIX" ]; then
   yum install -y zabbix-sender
 fi
 
-exec /entrypoint.sh "$@"
+exec /opt/ceph-container/bin/entrypoint.sh "$@"
