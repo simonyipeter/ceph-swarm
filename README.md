@@ -35,7 +35,7 @@ docker run -d --rm --net=host \
     -v `pwd`/var:/var/lib/ceph \
     -e NETWORK_AUTO_DETECT=4 \
     -e DEBUG=verbose \
-    ceph/daemon mon
+    ceph/daemon:latest-mimic mon
 
 docker exec -it ceph_mon ceph mon getmap -o /etc/ceph/ceph.monmap
 
