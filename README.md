@@ -106,7 +106,7 @@ On each node specify at least 2 swarm master nodes, to mount from:
 ```bash
 # Save the key from previous step:
 echo 'AQDilPRa1BYKFxAanqbBx0JnutW4AdlYJmUehg==' > /root/.ceph
-apt install ceph-fs-common
+apt install ceph-common
 echo 'node1.domain.local,node2.domain.local:/ /mnt/ceph ceph _netdev,name=swarm,secretfile=/root/.ceph 0 0' >> /etc/fstab
 mkdir /mnt/ceph && mount /mnt/ceph
 ```
